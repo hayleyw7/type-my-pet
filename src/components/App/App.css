@@ -15,6 +15,14 @@ h1 {
   color: #5EA48F;
 }
 
+button {
+  color: #282c34;
+  margin: 1rem;
+  background: white;
+  border: none;
+  font-weight: bold;
+}
+
 button:hover {
   transform: scale(1.1);
 }
