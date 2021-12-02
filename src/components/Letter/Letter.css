@@ -1,6 +1,6 @@
 .directions {
   margin-top: -1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #E6B375;
 }
 
@@ -12,12 +12,13 @@
 .answer-btn {
   color: #282c34;
   margin: 1rem;
-  padding: .75rem 1.75rem .75rem 0;
+  padding: 1rem;
   background: white;
   height: 11rem;
   width: 11rem;
-  text-align: left;
+  /* text-align: left; */
   border-radius: 1rem;
+  font-size: 1rem;
 }
 
 .btn-1 {
@@ -26,4 +27,8 @@
 
 .btn-2 {
   background-color: #F0A171;
+}
+
+p {
+  margin: .3rem;
 }

@@ -19,26 +19,22 @@ class Letter2 extends Component {
             className='answer-btn sensor-btn btn-2'
             onClick={e => this.props.setLetter('S')}
           >
-            <ul>
-              <li>Alert</li>
-              <li>Literal</li>
-              <li>Focused</li>
-              <li>Present</li>
-              <li>Details</li>
-            </ul>
+            <p>Alert</p>
+            <p>Literal</p>
+            <p>Focused</p>
+            <p>Present</p>
+            <p>Details</p>
           </button>
 
           <button
             className='answer-btn intuitor-btn btn-1'
             onClick={e => this.props.setLetter('N')}
           >
-            <ul>
-              <li>Daydreaming</li>
-              <li>Abstract</li>
-              <li>Big Picture</li>
-              <li>Creative</li>
-              <li>Problem-Solver</li>
-            </ul>
+            <p>Daydreaming</p>
+            <p>Abstract</p>
+            <p>Big Picture</p>
+            <p>Creative</p>
+            <p>Problem-Solver</p>
           </button>
 
         </section>

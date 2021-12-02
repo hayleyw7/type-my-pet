@@ -19,26 +19,22 @@ class Letter4 extends Component {
             className='answer-btn perceiver-btn btn-2'
             onClick={e => this.props.setLetter('P')}
           >
-            <ul>
-              <li>Spontaneous</li>
-              <li>Messy</li>
-              <li>Inconsistent</li>
-              <li>Chaotic</li>
-              <li>Open-Minded</li>
-            </ul>
+            <p>Spontaneous</p>
+            <p>Messy</p>
+            <p>Inconsistent</p>
+            <p>Chaotic</p>
+            <p>Open-Minded</p>
           </button>
 
           <button
             className='answer-btn judger-btn btn-1'
             onClick={e => this.props.setLetter('J')}
           >
-            <ul>
-              <li>Particular</li>
-              <li>Clean</li>
-              <li>Consistent</li>
-              <li>Organized</li>
-              <li>Closed-Minded</li>
-            </ul>
+            <p>Particular</p>
+            <p>Clean</p>
+            <p>Consistent</p>
+            <p>Organized</p>
+            <p>Closed-Minded</p>
           </button>
 
         </section>
