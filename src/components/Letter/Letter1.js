@@ -15,14 +15,14 @@ class Letter1 extends Component {
 
         <button
           className='introvert-btn'
-          onClick={e => this.props.setLetter('i')}
+          onClick={e => this.setLetter('i')}
         >
           Introvert
         </button>
 
         <button
           className='extrovert-btn'
-          onClick={e => this.props.setLetter('e')}
+          onClick={e => this.setLetter('e')}
         >
           Extrovert
         </button>
