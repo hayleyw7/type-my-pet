@@ -12,14 +12,14 @@ class Letter3 extends Component {
       <section className='question'>
 
         <button
-          className='answer-btn feeler-btn'
+          className='answer-btn feeler-btn btn-1'
           onClick={e => this.props.setLetter('F')}
         >
           Feeler
         </button>
 
         <button
-          className='answer-btn thinker-btn'
+          className='answer-btn thinker-btn btn-2'
           onClick={e => this.props.setLetter('T')}
         >
           Thinker

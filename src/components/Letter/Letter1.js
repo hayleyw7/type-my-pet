@@ -16,7 +16,7 @@ class Letter1 extends Component {
         <section className='btn-container'>
 
           <button
-            className='answer-btn introvert-btn'
+            className='answer-btn btn-1 introvert-btn'
             onClick={e => this.props.setLetter('I')}
           >
             <ul>
@@ -29,7 +29,7 @@ class Letter1 extends Component {
           </button>
 
           <button
-            className='answer-btn extrovert-btn'
+            className='answer-btn btn-2 extrovert-btn'
             onClick={e => this.props.setLetter('E')}
           >
             <ul>

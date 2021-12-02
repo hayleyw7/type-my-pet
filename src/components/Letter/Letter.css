@@ -1,7 +1,7 @@
 .directions {
   margin-top: -1rem;
   font-size: 1rem;
-  color: pink;
+  color: #E6B375;
 }
 
 .btn-container {
@@ -20,4 +20,12 @@
   width: 10rem;
   text-align: left;
   font-weight: bold;
+}
+
+.btn-1 {
+  background-color: #A0B778;
+}
+
+.btn-2 {
+  background-color: #F0A171;
 }
