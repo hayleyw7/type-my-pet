@@ -1,0 +1,33 @@
+.directions {
+  margin-top: -1rem;
+  font-size: 1.2rem;
+  color: #E6B375;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.answer-btn {
+  color: #282c34;
+  margin: 1rem;
+  padding: 1rem;
+  background: white;
+  height: 11rem;
+  width: 11rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.btn-1 {
+  background-color: #A0B778;
+}
+
+.btn-2 {
+  background-color: #F0A171;
+}
+
+p {
+  margin: .3rem;
+}

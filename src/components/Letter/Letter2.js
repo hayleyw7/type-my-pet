@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Letter.css';
 
 class Letter2 extends Component {
   constructor( {props} ) {
@@ -10,20 +11,33 @@ class Letter2 extends Component {
     return (
       <section className='question'>
 
-        <button
-          className='sensor-btn'
-          onClick={e => this.props.setLetter('S')}
-        >
-          Sensor
-        </button>
+        <h2 className='directions'>Which square best fits your pet's vibe?</h2>
 
-        <button
-          className='intuitor-btn'
-          onClick={e => this.props.setLetter('N')}
-        >
-          Intuitor
-        </button>
+        <section className='btn-container'>
 
+          <button
+            className='answer-btn sensor-btn btn-2'
+            onClick={e => this.props.setLetter('S')}
+          >
+            <p>Alert</p>
+            <p>Literal</p>
+            <p>Focused</p>
+            <p>Present</p>
+            <p>Details</p>
+          </button>
+
+          <button
+            className='answer-btn intuitor-btn btn-1'
+            onClick={e => this.props.setLetter('N')}
+          >
+            <p>Daydreaming</p>
+            <p>Abstract</p>
+            <p>Big Picture</p>
+            <p>Creative</p>
+            <p>Problem-Solver</p>
+          </button>
+
+        </section>
       </section>
     )    
   }

@@ -1,8 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-header {
+  /* background-color: #282c34; */
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -11,4 +9,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+h1 {
+  color: #5EA48F;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  color: #282c34;
+  margin: 1rem;
+  background: white;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.1);
 }

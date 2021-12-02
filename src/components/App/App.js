@@ -40,33 +40,49 @@ export class App extends Component {
     return (
       <div className="App">
 
-        <h1>Type My Pet</h1>
-
-        {!this.state.status
-          && <Begin begin={this.begin} />
+        {!this.state.status &&
+          <div>
+            <h1>Type My Pet</h1>
+            <Begin begin={this.begin} />
+          </div>
         }
 
-        {this.state.status === 'start'
-          && <Letter1 setLetter={this.setLetter} />
+        {this.state.status === 'start' &&
+          <div>
+            <h1>Type My Pet</h1>
+            <Letter1 setLetter={this.setLetter} />
+          </div>
         }
         
-        {this.state.typeArray.length === 1
-          && <Letter2 setLetter={this.setLetter} />
+        {this.state.typeArray.length === 1 &&
+          <div>
+            <h1>Type My Pet</h1>
+            <Letter2 setLetter={this.setLetter} />
+          </div>
         }
 
-        {this.state.typeArray.length === 2
-          && <Letter3 setLetter={this.setLetter} />
+        {this.state.typeArray.length === 2 &&
+          <div>
+            <h1>Type My Pet</h1>
+            <Letter3 setLetter={this.setLetter} />
+          </div>
         }
 
-        {this.state.typeArray.length === 3
-          && <Letter4 setLetter={this.setLetter} />
+        {this.state.typeArray.length === 3 &&
+          <div>
+            <h1>Type My Pet</h1>
+            <Letter4 setLetter={this.setLetter} />
+          </div>
         }
 
-        {this.state.typeArray.length === 4
-          && <Result
-            result={this.state.typeString}
-            restart={this.restart}
-          />
+        {this.state.typeArray.length === 4 &&
+          <div>
+            <h1>Your Pet's Type</h1>
+            <Result
+              result={this.state.typeString}
+              restart={this.restart}
+            />
+          </div>
         }
 
       </div>

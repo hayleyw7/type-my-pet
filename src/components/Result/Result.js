@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Result.css';
 
 class Result extends Component {
   constructor( {props} ) {
@@ -9,7 +10,8 @@ class Result extends Component {
   render() {
     return (
       <section className='results'>
-        <h2>{this.props.result}</h2>
+
+        <h2 className='result'>{this.props.result}</h2>
 
         <button
           className='restart-btn'
