@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Letter.css';
 
 class Letter3 extends Component {
   constructor( {props} ) {
@@ -11,14 +12,14 @@ class Letter3 extends Component {
       <section className='question'>
 
         <button
-          className='feeler-btn'
+          className='answer-btn feeler-btn'
           onClick={e => this.props.setLetter('F')}
         >
           Feeler
         </button>
 
         <button
-          className='thinker-btn'
+          className='answer-btn thinker-btn'
           onClick={e => this.props.setLetter('T')}
         >
           Thinker
