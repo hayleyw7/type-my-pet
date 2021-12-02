@@ -10,7 +10,7 @@ class Begin extends Component {
     return (
       <button
         className='begin-btn'
-        onClick={e => this.props.showQuestion('begin')}
+        onClick={e => this.props.begin()}
       >
         Begin
       </button>

@@ -12,6 +12,7 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      status: '',
       typeArray: [],
       typeString: ''
     }
@@ -19,31 +20,48 @@ export class App extends Component {
 
   setLetter = (letter) => {
     this.setState({ letter1: this.state.typeArray.push(letter) });
+    this.setState({ status: 'in progress' });
 
-    const typeToPrint = this.state.typeArray.join('')  
-
-    if (this.state.typeArray.length < 4) {
-      alert(typeToPrint)
-
-    } else {
+    if (this.state.typeArray.length === 4) {
+      const typeToPrint = this.state.typeArray.join('')  
       this.setState({ typeString: typeToPrint });  
     }
   }
 
   begin = () => {
-    
+    this.setState({ status: 'start' });  
   }
 
   render() {  
     return (
       <div className="App">
+
         <h1>Type My Pet</h1>
-        <Begin />
-        <Letter1 setLetter={this.setLetter} />
-        <Letter2 setLetter={this.setLetter} />
-        <Letter3 setLetter={this.setLetter} />
-        <Letter4 setLetter={this.setLetter} />
-        <Result result={this.state.typeString} />
+
+        {!this.state.status
+          && <Begin begin={this.begin} />
+        }
+
+        {this.state.status === 'start'
+          && <Letter1 setLetter={this.setLetter} />
+        }
+        
+        {this.state.typeArray.length === 1
+          && <Letter2 setLetter={this.setLetter} />
+        }
+
+        {this.state.typeArray.length === 2
+          && <Letter3 setLetter={this.setLetter} />
+        }
+
+        {this.state.typeArray.length === 3
+          && <Letter4 setLetter={this.setLetter} />
+        }
+
+        {this.state.typeArray.length === 4
+          && <Result result={this.state.typeString} />
+        }
+
       </div>
     );
   }
