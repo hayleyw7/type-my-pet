@@ -11,7 +11,7 @@ class Letter1 extends Component {
     return (
       <section className='question'>
 
-        <h2 className='directions'>Click the square that best fits.</h2>
+        <h2 className='directions'>Which square best fits your pet's vibe?</h2>
 
         <section className='btn-container'>
 
