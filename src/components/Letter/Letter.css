@@ -31,3 +31,19 @@
 p {
   margin: .3rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .directions {
+    font-size: 1.1rem;
+  }
+
+  .answer-btn {
+    height: 10rem;
+    width: 10rem;
+    margin: .4rem;
+  }
+
+  .btn-container {
+    margin: 1rem;
+  }  
+}  
