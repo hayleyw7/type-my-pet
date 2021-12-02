@@ -2,4 +2,4 @@
 
 This app gives the user a quiz that will determine their pet's MBTI type.
 
-[https://typemypet.surge.sh](Access the deployed application here.)
+[Access the deployed application here.](https://typemypet.surge.sh)
