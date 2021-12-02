@@ -4,9 +4,6 @@ class Letter4 extends Component {
   constructor( {props} ) {
     super();
     this.props = props;    
-    this.state = {
-      letter4: ''
-    };
   }
 
   render() {
