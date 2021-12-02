@@ -20,11 +20,11 @@ class Letter3 extends Component {
             onClick={e => this.props.setLetter('F')}
           >
             <ul>
-              <li>Shy</li>
-              <li>Solitary</li>
-              <li>Hides</li>
-              <li>Lounges</li>
-              <li>Passive</li>
+              <li>Moody</li>
+              <li>Sensitive</li>
+              <li>Warm</li>
+              <li>Empathetic</li>
+              <li>Compassionate</li>
             </ul>
           </button>
 
@@ -33,11 +33,11 @@ class Letter3 extends Component {
             onClick={e => this.props.setLetter('T')}
           >
             <ul>
-              <li>Shy</li>
-              <li>Solitary</li>
-              <li>Hides</li>
-              <li>Lounges</li>
-              <li>Passive</li>
+              <li>Stoic</li>
+              <li>Insensitive</li>
+              <li>Cold</li>
+              <li>Aloof</li>
+              <li>Indifferent</li>
             </ul>
           </button>
 
