@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Letter.css';
 
 class Letter1 extends Component {
   constructor( {props} ) {
@@ -10,20 +11,37 @@ class Letter1 extends Component {
     return (
       <section className='question'>
 
-        <button
-          className='introvert-btn'
-          onClick={e => this.props.setLetter('I')}
-        >
-          Introvert
-        </button>
+        <h2 className='directions'>Click the square that best fits.</h2>
 
-        <button
-          className='extrovert-btn'
-          onClick={e => this.props.setLetter('E')}
-        >
-          Extrovert
-        </button>
+        <section className='btn-container'>
 
+          <button
+            className='answer-btn introvert-btn'
+            onClick={e => this.props.setLetter('I')}
+          >
+            <ul>
+              <li>Shy</li>
+              <li>Solitary</li>
+              <li>Hides</li>
+              <li>Lounges</li>
+              <li>Passive</li>
+            </ul>
+          </button>
+
+          <button
+            className='answer-btn extrovert-btn'
+            onClick={e => this.props.setLetter('E')}
+          >
+            <ul>
+              <li>Clingy</li>
+              <li>Needy</li>
+              <li>Vocal</li>
+              <li>Playful</li>
+              <li>Zoomies</li>
+            </ul>
+          </button>
+
+        </section>
       </section>
     )    
   }
