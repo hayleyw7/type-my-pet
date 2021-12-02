@@ -11,20 +11,37 @@ class Letter3 extends Component {
     return (
       <section className='question'>
 
-        <button
-          className='answer-btn feeler-btn btn-1'
-          onClick={e => this.props.setLetter('F')}
-        >
-          Feeler
-        </button>
+        <h2 className='directions'>Click the square that best fits.</h2>
 
-        <button
-          className='answer-btn thinker-btn btn-2'
-          onClick={e => this.props.setLetter('T')}
-        >
-          Thinker
-        </button>
+        <section className='btn-container'>
 
+          <button
+            className='answer-btn feeler-btn btn-1'
+            onClick={e => this.props.setLetter('F')}
+          >
+            <ul>
+              <li>Shy</li>
+              <li>Solitary</li>
+              <li>Hides</li>
+              <li>Lounges</li>
+              <li>Passive</li>
+            </ul>
+          </button>
+
+          <button
+            className='answer-btn thinker-btn btn-2'
+            onClick={e => this.props.setLetter('T')}
+          >
+            <ul>
+              <li>Shy</li>
+              <li>Solitary</li>
+              <li>Hides</li>
+              <li>Lounges</li>
+              <li>Passive</li>
+            </ul>
+          </button>
+
+        </section>
       </section>
     )    
   }
