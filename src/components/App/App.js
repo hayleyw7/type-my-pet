@@ -32,6 +32,10 @@ export class App extends Component {
     this.setState({ status: 'start' });  
   }
 
+  restart = () => {
+    this.setState({ status: '', typeArray: [], typeString: '' });  
+  }
+
   render() {  
     return (
       <div className="App">
@@ -59,7 +63,10 @@ export class App extends Component {
         }
 
         {this.state.typeArray.length === 4
-          && <Result result={this.state.typeString} />
+          && <Result
+            result={this.state.typeString}
+            restart={this.restart}
+          />
         }
 
       </div>

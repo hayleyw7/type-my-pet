@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Letter4 extends Component {
+class Result extends Component {
   constructor( {props} ) {
     super();
     this.props = props;    
@@ -8,9 +8,19 @@ class Letter4 extends Component {
 
   render() {
     return (
-      <h2>{this.props.result}</h2>
+      <section className='results'>
+        <h2>{this.props.result}</h2>
+
+        <button
+          className='restart-btn'
+          onClick={e => this.props.restart()}
+        >
+          Restart
+        </button>
+
+      </section>
     )    
   }
 }
 
-export default Letter4;
+export default Result;
