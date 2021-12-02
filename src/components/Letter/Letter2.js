@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Letter2 extends Component {
   constructor( {props} ) {
     super();
-    this.props = props;    
+    this.props = props;
   }
 
   render() {
@@ -12,14 +12,14 @@ class Letter2 extends Component {
 
         <button
           className='sensor-btn'
-          onClick={e => this.props.setLetter('s')}
+          onClick={e => this.props.setLetter('S')}
         >
           Sensor
         </button>
 
         <button
           className='intuitor-btn'
-          onClick={e => this.props.setLetter('n')}
+          onClick={e => this.props.setLetter('N')}
         >
           Intuitor
         </button>

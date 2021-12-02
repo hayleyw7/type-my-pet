@@ -10,16 +10,14 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      letter1: '',
-      letter2: '',
-      letter3: '',
-      letter4: ''
+      type: []
     }
   }
 
   setLetter = (letter) => {
-    this.setState({ letter1: letter });
-    alert(letter)
+    this.setState({ letter1: this.state.type.push(letter) });
+    const typeToPrint = this.state.type.join('')
+    alert(typeToPrint)
   }
 
   render() {  
