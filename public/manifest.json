@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Type My Pet",
+  "name": "Type My Pet — Pet MBTI Quiz",
+  "description": "Discover your pet's MBTI personality type with a fun, interactive quiz.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#5EA48F",
+  "background_color": "#282c34"
 }

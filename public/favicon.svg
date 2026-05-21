@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Type My Pet">
+  <rect width="32" height="32" rx="6" fill="#282c34"/>
+  <g fill="#5EA48F">
+    <ellipse cx="16" cy="20" rx="5" ry="4.5"/>
+    <circle cx="10" cy="12" r="3"/>
+    <circle cx="16" cy="10" r="3"/>
+    <circle cx="22" cy="12" r="3"/>
+    <circle cx="8" cy="17" r="2.5"/>
+    <circle cx="24" cy="17" r="2.5"/>
+  </g>
+</svg>
