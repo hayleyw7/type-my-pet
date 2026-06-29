@@ -36,47 +36,70 @@ export class App extends Component {
     this.setState({ status: '', typeArray: [], typeString: '' });  
   }
 
-  render() {  
+  renderProgress = (questionNumber) => (
+    <div className="progress" aria-label={`Question ${questionNumber} of 4`}>
+      {[1, 2, 3, 4].map((step) => (
+        <span
+          key={step}
+          className={`progress-dot${step <= questionNumber ? ' active' : ''}`}
+        />
+      ))}
+    </div>
+  )
+
+  render() {
+    const questionNumber =
+      this.state.typeArray.length === 0 && this.state.status === 'start'
+        ? 1
+        : this.state.typeArray.length > 0 && this.state.typeArray.length < 4
+        ? this.state.typeArray.length + 1
+        : 0;
+
     return (
       <div className="App">
 
         {!this.state.status &&
-          <div>
+          <div className="screen">
             <h1>Type My Pet</h1>
+            <p className="tagline">A quick quiz to find your pet's personality type</p>
             <Begin begin={this.begin} />
           </div>
         }
 
         {this.state.status === 'start' &&
-          <div>
+          <div className="screen">
             <h1>Type My Pet</h1>
+            {this.renderProgress(questionNumber)}
             <Letter1 setLetter={this.setLetter} />
           </div>
         }
-        
+
         {this.state.typeArray.length === 1 &&
-          <div>
+          <div className="screen">
             <h1>Type My Pet</h1>
+            {this.renderProgress(questionNumber)}
             <Letter2 setLetter={this.setLetter} />
           </div>
         }
 
         {this.state.typeArray.length === 2 &&
-          <div>
+          <div className="screen">
             <h1>Type My Pet</h1>
+            {this.renderProgress(questionNumber)}
             <Letter3 setLetter={this.setLetter} />
           </div>
         }
 
         {this.state.typeArray.length === 3 &&
-          <div>
+          <div className="screen">
             <h1>Type My Pet</h1>
+            {this.renderProgress(questionNumber)}
             <Letter4 setLetter={this.setLetter} />
           </div>
         }
 
         {this.state.typeArray.length === 4 &&
-          <div>
+          <div className="screen">
             <h1>Your Pet's Type</h1>
             <Result
               result={this.state.typeString}

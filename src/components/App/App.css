@@ -8,12 +8,47 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 2rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.screen {
+  width: 100%;
+  max-width: 36rem;
 }
 
 h1 {
   color: #5EA48F;
   font-size: 4rem;
-  margin-bottom: 2rem;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  margin: 0 0 2rem;
+  line-height: 1.5;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.progress-dot.active {
+  background: #5EA48F;
+  transform: scale(1.15);
 }
 
 button {
@@ -22,14 +57,33 @@ button {
   background: white;
   border: none;
   font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:focus-visible {
+  outline: 2px solid #5EA48F;
+  outline-offset: 3px;
 }
 
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 2.7rem;
   }
-}  
+
+  .tagline {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
