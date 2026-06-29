@@ -8,32 +8,71 @@ import Letter3 from '../Letter/Letter3';
 import Letter4 from '../Letter/Letter4';
 import Result from '../Result/Result';
 
+const STORAGE_KEY = 'type-my-pet-quiz';
+
+function loadSavedState() {
+  try {
+    const saved = sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return null;
+
+    const parsed = JSON.parse(saved);
+    if (!parsed || typeof parsed !== 'object') return null;
+
+    return {
+      status: typeof parsed.status === 'string' ? parsed.status : '',
+      typeArray: Array.isArray(parsed.typeArray) ? parsed.typeArray : [],
+      typeString: typeof parsed.typeString === 'string' ? parsed.typeString : '',
+    };
+  } catch {
+    return null;
+  }
+}
+
 export class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = loadSavedState() || {
       status: '',
       typeArray: [],
       typeString: ''
     }
   }
 
-  setLetter = (letter) => {
-    this.setState({ letter1: this.state.typeArray.push(letter) });
-    this.setState({ status: 'in progress' });
+  saveState = () => {
+    const { status, typeArray, typeString } = this.state;
 
-    if (this.state.typeArray.length === 4) {
-      const typeToPrint = this.state.typeArray.join('')  
-      this.setState({ typeString: typeToPrint });  
+    if (!status && typeArray.length === 0 && !typeString) {
+      sessionStorage.removeItem(STORAGE_KEY);
+      return;
     }
+
+    sessionStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ status, typeArray, typeString })
+    );
+  }
+
+  setLetter = (letter) => {
+    const typeArray = [...this.state.typeArray, letter];
+    const nextState = {
+      status: 'in progress',
+      typeArray,
+    };
+
+    if (typeArray.length === 4) {
+      nextState.typeString = typeArray.join('');
+    }
+
+    this.setState(nextState, this.saveState);
   }
 
   begin = () => {
-    this.setState({ status: 'start' });  
+    this.setState({ status: 'start' }, this.saveState);
   }
 
   restart = () => {
-    this.setState({ status: '', typeArray: [], typeString: '' });  
+    sessionStorage.removeItem(STORAGE_KEY);
+    this.setState({ status: '', typeArray: [], typeString: '' });
   }
 
   renderProgress = (questionNumber) => (
